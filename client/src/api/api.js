@@ -1,5 +1,5 @@
 import axios from 'axios'
-export const baseUrl = "https://event-app-rk5j.onrender.com/api";
+export const baseUrl = "https://event-management-dapt.onrender.com/api";
 // export const baseUrl = "http://localhost:3000/api";
 
 const getHeader = (token) => {

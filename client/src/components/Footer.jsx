@@ -1,5 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Flex, Text, Link } from "@chakra-ui/react";
 
 function Footer() {
   return (
@@ -40,14 +39,16 @@ function Footer() {
           <Box bg="#00BFA5" textAlign="center">
             <Text fontSize=".7rem" fontWeight="300" mt={3}>
               Made By{" "}
-              <Text
+              <Link
                 display="inline"
                 fontWeight="600"
                 textDecoration="underline"
                 cursor="pointer"
+                href="https://suvaranjan.vercel.app/"
+                isExternal
               >
-                <Link to="https://suvaranjan.vercel.app/"> @Suvaranjan</Link>
-              </Text>
+                @Suvaranjan
+              </Link>
             </Text>
           </Box>
         </Box>

@@ -9,7 +9,7 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const corsOptions = {
-    origin: 'http://localhost:5173', // Replace with the origin of your frontend application
+    origin: 'https://event-management-by-suvaranjan.vercel.app/',
 };
 
 // Middleware
