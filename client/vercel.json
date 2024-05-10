@@ -1,6 +1,21 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
+    "routes" :[
+        {
+            "src":"/",
+            "dest":"/"
+        },
+        {
+            "src":"/create-event",
+            "dest":"/"
+        },
+        {
+            "src":"/myevents",
+            "dest":"/"
+        },
+        {
+            "src":"/about",
+            "dest":"/"
+        }
     ]
-  }
+}
   
