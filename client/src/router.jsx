@@ -11,6 +11,7 @@ import UpdateEvent from "./components/UpdateEvent";
 import PaymentSuccess from "./components/PaymentSuccess";
 import PaymentFailed from "./components/PaymentFailed";
 import MyEvents from "./components/MyEvents";
+import About from "./components/About";
 export const router = createBrowserRouter([
   {
     element: <NavLayout />,
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: "/myevents",
         element: <MyEvents />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },

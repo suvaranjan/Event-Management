@@ -187,7 +187,9 @@ export function NavMenu({ onClose }) {
         </Link>
       </ListItem>
       <ListItem listStyleType="none">
-        <Link onClick={onClose}>About</Link>
+        <Link href="/about" onClick={onClose}>
+          About
+        </Link>
       </ListItem>
     </>
   );
