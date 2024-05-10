@@ -24,6 +24,7 @@ import { useNavigate } from "react-router-dom";
 import { categories } from "../helper/helper";
 import { searchByQuery } from "./../api/api";
 import LoadingCard from "./LoadingCard";
+import { baseUrl } from "./../api/api";
 
 function EventsMain() {
   const [events, setEvents] = useState([]);
@@ -42,7 +43,7 @@ function EventsMain() {
     try {
       setIsLoading(true);
       const res = await axios.get(
-        `http://localhost:3000/api/event/all-events?page=${currentPage}`,
+        `${baseUrl}/event/all-events?page=${currentPage}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

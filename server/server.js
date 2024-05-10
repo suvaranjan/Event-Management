@@ -31,6 +31,6 @@ connect().then(() => {
             console.log(`Server connected to http://localhost:${PORT}`);
         });
     } catch (error) {
-        console.log(error.message);
+        console.log(error);
     }
 });

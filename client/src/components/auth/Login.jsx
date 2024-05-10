@@ -25,6 +25,7 @@ import Register from "./Register";
 import axios from "axios";
 import toast from "react-hot-toast";
 import useStore from "../../zustand";
+import { baseUrl } from "../../api/api";
 
 // eslint-disable-next-line react/prop-types
 export default function Login({ isOpen, onClose }) {
@@ -37,7 +38,7 @@ export default function Login({ isOpen, onClose }) {
 
   const handleLogin = async (values, formik) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/login", values);
+      const res = await axios.post(`${baseUrl}/login`, values);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userInfo", JSON.stringify(res.data.userInfo));
       setStoreToken(res.data.token);

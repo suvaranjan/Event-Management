@@ -69,7 +69,7 @@ const getEvents = async (req, res) => {
 
         res.json(results);
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ msg: 'Internal server error' });
     }
 };
@@ -90,7 +90,7 @@ const getEventById = async (req, res) => {
 
         res.json(event);
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ msg: 'Internal server error' });
     }
 };
@@ -176,7 +176,7 @@ const eventDelete = async (req, res) => {
 
         res.json({ msg: "Event deleted successfully" });
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ msg: 'Internal server error' });
     }
 };
@@ -209,7 +209,7 @@ const buyTicketPayment = async (req, res) => {
         res.json({ sessionId: session.id });
 
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ msg: 'Internal server error' });
     }
 }
@@ -238,7 +238,7 @@ const joinEvent = async (req, res) => {
 
         res.json({ msg: 'Joined event successfully' });
     } catch (error) {
-        console.error(error.message);
+        console.log(error.message);
         res.status(500).json({ msg: 'Internal server error' });
     }
 };
@@ -252,7 +252,7 @@ const findUserEvents = async (req, res) => {
 
         res.json(events);
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ msg: 'Internal server error' });
     }
 };
@@ -270,7 +270,7 @@ const findEventsUserOrganize = async (req, res) => {
         // Return the found events
         return res.status(200).json(events);
     } catch (error) {
-        console.error('Error finding events:', error);
+        console.log('Error finding events:', error);
         return res.status(500).json({ message: 'Internal server error' });
     }
 };

@@ -21,6 +21,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { baseUrl } from "../../api/api";
 
 // eslint-disable-next-line react/prop-types
 export default function Register({ isOpen, onClose }) {
@@ -37,10 +38,7 @@ export default function Register({ isOpen, onClose }) {
 
   const handleRegister = async (values, formik) => {
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/register",
-        values
-      );
+      const res = await axios.post(`${baseUrl}/login`, values);
       toast.success("Registration Successfull");
       onClose();
     } catch (error) {
